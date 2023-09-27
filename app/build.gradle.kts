@@ -43,23 +43,28 @@ dependencies {
 
     // ROOM
     implementation("androidx.room:room-ktx:2.5.2")
+    annotationProcessor("androidx.room:room-compiler:2.5.2")
+    implementation("androidx.room:room-ktx:2.5.2")
     kapt("androidx.room:room-compiler:2.5.2")
 
     // ViewModel
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    // LiveData
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
 
     // Fragment
     implementation ("androidx.fragment:fragment-ktx:1.6.1")
 
     // Navigation
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.3")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.7.3")
+    implementation ("androidx.navigation:navigation-fragment:2.5.3")
+    implementation ("androidx.navigation:navigation-ui:2.5.3")
 
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.google.code.gson:gson:2.9.1")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
 
     implementation("io.coil-kt:coil:2.4.0")
 
