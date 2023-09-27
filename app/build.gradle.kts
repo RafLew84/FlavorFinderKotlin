@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-kapt")
 }
 
 android {
@@ -26,6 +27,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -36,6 +40,28 @@ android {
 }
 
 dependencies {
+
+    // ROOM
+    implementation("androidx.room:room-ktx:2.5.2")
+    kapt("androidx.room:room-compiler:2.5.2")
+
+    // ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    // LiveData
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    // Fragment
+    implementation ("androidx.fragment:fragment-ktx:1.6.1")
+
+    // Navigation
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.3")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.3")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("io.coil-kt:coil:2.4.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
