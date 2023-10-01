@@ -36,7 +36,6 @@ class MealViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun fetchData() = viewModelScope.launch {
-        _meals.value = Resource.Loading()
         val response = repository.fetchData()
         delay(2000L)
         _meals.value = handleMealResponse(response)
@@ -50,7 +49,6 @@ class MealViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun fetchById(id: String) = viewModelScope.launch {
-        _meal.value = Resource.Loading()
         val response = repository.fetchById(id)
         delay(2000L)
         _meal.value = handleMealResponse(response)
